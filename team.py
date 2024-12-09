@@ -12,8 +12,9 @@ def get_subjects(file):
 
 
 def get_search_subject(file):
-    search_subject = input("유형을 선택해 주세요 > ")
-    subjects = get_subjects(file)
+    subjects = list(get_subjects(file))
+    print("-", "\n- ".join(subjects))
+    search_subject = input("- 유형을 선택하세요: ")
     while True:
         if search_subject in subjects:
             break
